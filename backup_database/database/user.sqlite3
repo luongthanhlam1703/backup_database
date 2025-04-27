@@ -1,9 +1,6 @@
 import sqlite3
 
-# Tạo một kết nối đến file SQLite
 conn = sqlite3.connect('database2.sqlite3')
-
-# Tạo bảng
 conn.execute('''
 CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -11,8 +8,6 @@ CREATE TABLE users (
     email TEXT
 );
 ''')
-
-# Chèn một số dữ liệu mẫu vào
 conn.execute("INSERT INTO users (name, email) VALUES ('ok', 'ok@gmail.com')")
 conn.execute("INSERT INTO users (name, email) VALUES ('ok', 'ok1@gmail.com')")
 
